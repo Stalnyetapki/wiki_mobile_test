@@ -1,22 +1,20 @@
 package tests.browserstack_sample;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.WebDriverRunner;
 import io.appium.java_client.AppiumBy;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
-import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SearchTests extends TestBase {
+public class AndroidSearchTests extends TestBase {
 
     @Test
-    @DisplayName("Mobile wiki page search test")
+    @Tag("android")
+    @DisplayName("Mobile wiki page search test by Android device")
     void successfulSearchTest() {
         step("Use search line and and type value", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
