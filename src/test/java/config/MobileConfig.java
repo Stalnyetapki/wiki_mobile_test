@@ -15,4 +15,7 @@ public interface MobileConfig extends Config {
     @Key("os_version")
     @DefaultValue("12.0")
     String getVersion();
+
+    @Key("appUrl")
+    String getApp();
 }

@@ -15,8 +15,4 @@ public interface AuthenticationConfig extends Config {
 
     @Key("remoteUrl")
     String getRemoteUrl();
-
-    @Key("app")
-    String getApp();
-
 }
